@@ -1,0 +1,54 @@
+\doxysection{Graph\+Core.\+hpp}
+\hypertarget{_graph_core_8hpp_source}{}\label{_graph_core_8hpp_source}\mbox{\hyperlink{_graph_core_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ GRAPHCORE\_HPP}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ GRAPHCORE\_HPP}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_grafo_base}{GrafoBase}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_grafo_base}{\string~GrafoBase}}()\ \{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_grafo_base_a419db45274024ef03871c5418dd55a21}{cargarDatos}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_grafo_base_a14c0b5377e6d695f06411952f8864dd7}{obtenerNodoCritico}}()\ =\ 0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<std::pair<int,\ int>>\ \mbox{\hyperlink{class_grafo_base_acf10d443b5844aa57dcafabdd4b5bbe7}{bfs}}(\textcolor{keywordtype}{int}\ startNode,\ \textcolor{keywordtype}{int}\ depth)\ =\ 0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getNumNodos()\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getNumAristas()\ =\ 0;}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }GrafoDisperso\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_grafo_base}{GrafoBase}}\ \{}
+\DoxyCodeLine{00060\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<int>\ row\_ptr;}
+\DoxyCodeLine{00063\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ std::vector<int>\ col\_indices;}
+\DoxyCodeLine{00066\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_nodos;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ num\_aristas;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ guardarCache(\textcolor{keyword}{const}\ std::string\&\ baseFilename);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ cargarDesdeCache(\textcolor{keyword}{const}\ std::string\&\ baseFilename);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00085\ \ \ \ \ GrafoDisperso();}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_grafo_disperso_a7687e6c2a07125b754480f4ae6e765ab}{cargarDatos}}(\textcolor{keyword}{const}\ std::string\&\ filename)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_grafo_disperso_a1636c90b01e42b7bf1b591254da72dbd}{obtenerNodoCritico}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00088\ \ \ \ \ std::vector<std::pair<int,\ int>>\ \mbox{\hyperlink{class_grafo_disperso_a5d9601c2bc72043118c1c68a6e2d913f}{bfs}}(\textcolor{keywordtype}{int}\ startNode,\ \textcolor{keywordtype}{int}\ depth)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ getNumNodos()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ num\_nodos;\ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ getNumAristas()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ num\_aristas;\ \}}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

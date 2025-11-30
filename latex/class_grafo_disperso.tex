@@ -1,0 +1,122 @@
+\doxysection{Grafo\+Disperso Class Reference}
+\hypertarget{class_grafo_disperso}{}\label{class_grafo_disperso}\index{GrafoDisperso@{GrafoDisperso}}
+
+
+Implementación optimizada de grafos usando CSR (Compressed Sparse Row).  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Core.\+hpp$>$}
+
+Inheritance diagram for Grafo\+Disperso\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grafo_disperso}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_grafo_disperso_a7687e6c2a07125b754480f4ae6e765ab}{cargar\+Datos}} (const std\+::string \&filename) override
+\begin{DoxyCompactList}\small\item\em Carga el grafo. Decide inteligentemente entre Texto o Caché Binaria. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_grafo_disperso_a1636c90b01e42b7bf1b591254da72dbd}{obtener\+Nodo\+Critico}} () override
+\begin{DoxyCompactList}\small\item\em Encuentra el nodo con mayor grado de salida analizando row\+\_\+ptr. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_grafo_disperso_a5d9601c2bc72043118c1c68a6e2d913f}{bfs}} (int start\+Node, int depth) override
+\begin{DoxyCompactList}\small\item\em Algoritmo BFS nativo utilizando la estructura CSR. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_grafo_disperso_ad904505095bc39de163176051cb4e92a}{get\+Num\+Nodos}} () override
+\item 
+int \mbox{\hyperlink{class_grafo_disperso_aa8d39b70e671b5d21cf3400e27ff5151}{get\+Num\+Aristas}} () override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación optimizada de grafos usando CSR (Compressed Sparse Row). 
+
+
+\begin{DoxyItemize}
+\item Esta clase gestiona la memoria manualmente mediante vectores compactos para permitir la carga de millones de nodos en RAM limitada. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_grafo_disperso_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_grafo_disperso_a5d9601c2bc72043118c1c68a6e2d913f}\index{GrafoDisperso@{GrafoDisperso}!bfs@{bfs}}
+\index{bfs@{bfs}!GrafoDisperso@{GrafoDisperso}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily \label{class_grafo_disperso_a5d9601c2bc72043118c1c68a6e2d913f} 
+std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ Grafo\+Disperso\+::bfs (\begin{DoxyParamCaption}\item[{int}]{start\+Node}{, }\item[{int}]{depth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Algoritmo BFS nativo utilizando la estructura CSR. 
+
+\begin{DoxyReturn}{Returns}
+Lista de aristas para visualización. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_grafo_base_acf10d443b5844aa57dcafabdd4b5bbe7}{Grafo\+Base}}.
+
+\Hypertarget{class_grafo_disperso_a7687e6c2a07125b754480f4ae6e765ab}\index{GrafoDisperso@{GrafoDisperso}!cargarDatos@{cargarDatos}}
+\index{cargarDatos@{cargarDatos}!GrafoDisperso@{GrafoDisperso}}
+\doxysubsubsection{\texorpdfstring{cargarDatos()}{cargarDatos()}}
+{\footnotesize\ttfamily \label{class_grafo_disperso_a7687e6c2a07125b754480f4ae6e765ab} 
+void Grafo\+Disperso\+::cargar\+Datos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Carga el grafo. Decide inteligentemente entre Texto o Caché Binaria. 
+
+
+\begin{DoxyItemize}
+\item Algoritmo\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Verifica si existe la versión .bin del archivo.
+\item Si existe, carga directamente los vectores a RAM (milisegundos).
+\item Si no, lee el .txt línea por línea, construye el CSR y genera la caché. 
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{class_grafo_base_a419db45274024ef03871c5418dd55a21}{Grafo\+Base}}.
+
+\Hypertarget{class_grafo_disperso_aa8d39b70e671b5d21cf3400e27ff5151}\index{GrafoDisperso@{GrafoDisperso}!getNumAristas@{getNumAristas}}
+\index{getNumAristas@{getNumAristas}!GrafoDisperso@{GrafoDisperso}}
+\doxysubsubsection{\texorpdfstring{getNumAristas()}{getNumAristas()}}
+{\footnotesize\ttfamily \label{class_grafo_disperso_aa8d39b70e671b5d21cf3400e27ff5151} 
+int Grafo\+Disperso\+::get\+Num\+Aristas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_grafo_base}{Grafo\+Base}}.
+
+\Hypertarget{class_grafo_disperso_ad904505095bc39de163176051cb4e92a}\index{GrafoDisperso@{GrafoDisperso}!getNumNodos@{getNumNodos}}
+\index{getNumNodos@{getNumNodos}!GrafoDisperso@{GrafoDisperso}}
+\doxysubsubsection{\texorpdfstring{getNumNodos()}{getNumNodos()}}
+{\footnotesize\ttfamily \label{class_grafo_disperso_ad904505095bc39de163176051cb4e92a} 
+int Grafo\+Disperso\+::get\+Num\+Nodos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_grafo_base}{Grafo\+Base}}.
+
+\Hypertarget{class_grafo_disperso_a1636c90b01e42b7bf1b591254da72dbd}\index{GrafoDisperso@{GrafoDisperso}!obtenerNodoCritico@{obtenerNodoCritico}}
+\index{obtenerNodoCritico@{obtenerNodoCritico}!GrafoDisperso@{GrafoDisperso}}
+\doxysubsubsection{\texorpdfstring{obtenerNodoCritico()}{obtenerNodoCritico()}}
+{\footnotesize\ttfamily \label{class_grafo_disperso_a1636c90b01e42b7bf1b591254da72dbd} 
+int Grafo\+Disperso\+::obtener\+Nodo\+Critico (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Encuentra el nodo con mayor grado de salida analizando row\+\_\+ptr. 
+
+
+
+Implements \mbox{\hyperlink{class_grafo_base_a14c0b5377e6d695f06411952f8864dd7}{Grafo\+Base}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_core_8hpp}{Graph\+Core.\+hpp}}\item 
+\mbox{\hyperlink{_graph_core_8cpp}{Graph\+Core.\+cpp}}\end{DoxyCompactItemize}

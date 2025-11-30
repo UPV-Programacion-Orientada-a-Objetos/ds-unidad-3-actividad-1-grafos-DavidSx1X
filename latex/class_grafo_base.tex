@@ -1,0 +1,110 @@
+\doxysection{Grafo\+Base Class Reference}
+\hypertarget{class_grafo_base}{}\label{class_grafo_base}\index{GrafoBase@{GrafoBase}}
+
+
+Clase abstracta que define el contrato para cualquier motor de grafos.  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Core.\+hpp$>$}
+
+Inheritance diagram for Grafo\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_grafo_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_grafo_base_a419db45274024ef03871c5418dd55a21}{cargar\+Datos}} (const std\+::string \&filename)=0
+\begin{DoxyCompactList}\small\item\em Carga un dataset desde un archivo. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_grafo_base_a14c0b5377e6d695f06411952f8864dd7}{obtener\+Nodo\+Critico}} ()=0
+\begin{DoxyCompactList}\small\item\em Calcula el nodo con mayor grado (más conexiones). \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_grafo_base_acf10d443b5844aa57dcafabdd4b5bbe7}{bfs}} (int start\+Node, int depth)=0
+\begin{DoxyCompactList}\small\item\em Ejecuta una Búsqueda en Anchura (BFS). \end{DoxyCompactList}\item 
+\Hypertarget{class_grafo_base_a4b229b151da416edc3c863ef481a69a0}\label{class_grafo_base_a4b229b151da416edc3c863ef481a69a0} 
+virtual int {\bfseries get\+Num\+Nodos} ()=0
+\item 
+\Hypertarget{class_grafo_base_ad648bfe9614f094427ae57bf8c13ee91}\label{class_grafo_base_ad648bfe9614f094427ae57bf8c13ee91} 
+virtual int {\bfseries get\+Num\+Aristas} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase abstracta que define el contrato para cualquier motor de grafos. 
+
+
+\begin{DoxyItemize}
+\item Utiliza métodos virtuales puros para garantizar el Polimorfismo. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_grafo_base_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_grafo_base_acf10d443b5844aa57dcafabdd4b5bbe7}\index{GrafoBase@{GrafoBase}!bfs@{bfs}}
+\index{bfs@{bfs}!GrafoBase@{GrafoBase}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily \label{class_grafo_base_acf10d443b5844aa57dcafabdd4b5bbe7} 
+virtual std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ Grafo\+Base\+::bfs (\begin{DoxyParamCaption}\item[{int}]{start\+Node}{, }\item[{int}]{depth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Ejecuta una Búsqueda en Anchura (BFS). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Node} & Nodo de inicio. \\
+\hline
+{\em depth} & Profundidad máxima de búsqueda (niveles). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector de pares (origen, destino) representando las aristas visitadas. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_grafo_disperso_a5d9601c2bc72043118c1c68a6e2d913f}{Grafo\+Disperso}}.
+
+\Hypertarget{class_grafo_base_a419db45274024ef03871c5418dd55a21}\index{GrafoBase@{GrafoBase}!cargarDatos@{cargarDatos}}
+\index{cargarDatos@{cargarDatos}!GrafoBase@{GrafoBase}}
+\doxysubsubsection{\texorpdfstring{cargarDatos()}{cargarDatos()}}
+{\footnotesize\ttfamily \label{class_grafo_base_a419db45274024ef03871c5418dd55a21} 
+virtual void Grafo\+Base\+::cargar\+Datos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Carga un dataset desde un archivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Ruta del archivo de texto o binario. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_grafo_disperso_a7687e6c2a07125b754480f4ae6e765ab}{Grafo\+Disperso}}.
+
+\Hypertarget{class_grafo_base_a14c0b5377e6d695f06411952f8864dd7}\index{GrafoBase@{GrafoBase}!obtenerNodoCritico@{obtenerNodoCritico}}
+\index{obtenerNodoCritico@{obtenerNodoCritico}!GrafoBase@{GrafoBase}}
+\doxysubsubsection{\texorpdfstring{obtenerNodoCritico()}{obtenerNodoCritico()}}
+{\footnotesize\ttfamily \label{class_grafo_base_a14c0b5377e6d695f06411952f8864dd7} 
+virtual int Grafo\+Base\+::obtener\+Nodo\+Critico (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calcula el nodo con mayor grado (más conexiones). 
+
+\begin{DoxyReturn}{Returns}
+El ID del nodo crítico. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_grafo_disperso_a1636c90b01e42b7bf1b591254da72dbd}{Grafo\+Disperso}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_core_8hpp}{Graph\+Core.\+hpp}}\end{DoxyCompactItemize}

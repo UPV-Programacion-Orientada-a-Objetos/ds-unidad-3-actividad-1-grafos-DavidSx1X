@@ -1,0 +1,75 @@
+\doxysection{main.\+App Class Reference}
+\hypertarget{classmain_1_1_app}{}\label{classmain_1_1_app}\index{main.App@{main.App}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmain_1_1_app_ae3e4ae90c8c2c477c2f013b8d9680ecd}\label{classmain_1_1_app_ae3e4ae90c8c2c477c2f013b8d9680ecd} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, root)
+\item 
+\mbox{\hyperlink{classmain_1_1_app_a89c91abe25e4d1dc05904cbb64011925}{load}} (self)
+\item 
+\mbox{\hyperlink{classmain_1_1_app_a28609a20f62495f2f641e27b214752a4}{critico}} (self)
+\item 
+\mbox{\hyperlink{classmain_1_1_app_a83c9b96a1afa1530ab4781b7e9b85ab1}{run\+\_\+bfs}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmain_1_1_app_a6a9b79198d5f4428eb00dd7b9f7ab0df}\label{classmain_1_1_app_a6a9b79198d5f4428eb00dd7b9f7ab0df} 
+{\bfseries root} = root
+\item 
+\Hypertarget{classmain_1_1_app_a2dff238fa6de733df0d3dc48cddadfa4}\label{classmain_1_1_app_a2dff238fa6de733df0d3dc48cddadfa4} 
+{\bfseries engine} = neuronet.\+Py\+Graph()
+\item 
+\Hypertarget{classmain_1_1_app_ad8e11d49fe4da72998084461aa2cd99a}\label{classmain_1_1_app_ad8e11d49fe4da72998084461aa2cd99a} 
+bool {\bfseries loaded} = False
+\item 
+\Hypertarget{classmain_1_1_app_a720b613ab27b0aee704d7a56c5e5d574}\label{classmain_1_1_app_a720b613ab27b0aee704d7a56c5e5d574} 
+{\bfseries lbl\+\_\+info} = tk.\+Label(frame, text="{}Esperando..."{})
+\item 
+\Hypertarget{classmain_1_1_app_ac7b103a43dfa9d03bf3ed1549933d543}\label{classmain_1_1_app_ac7b103a43dfa9d03bf3ed1549933d543} 
+{\bfseries entry\+\_\+start} = tk.\+Entry(frame); self.\+entry\+\_\+start.\+pack()
+\item 
+\Hypertarget{classmain_1_1_app_a9a3434f921dfbcd83c851fcd44fe1e3f}\label{classmain_1_1_app_a9a3434f921dfbcd83c851fcd44fe1e3f} 
+{\bfseries entry\+\_\+depth} = tk.\+Entry(frame); self.\+entry\+\_\+depth.\+pack()
+\item 
+\Hypertarget{classmain_1_1_app_a094b3b453d87f9233944807dfa643cad}\label{classmain_1_1_app_a094b3b453d87f9233944807dfa643cad} 
+{\bfseries fig} = plt.\+Figure(figsize=(6, 6))
+\item 
+\Hypertarget{classmain_1_1_app_a25088f398f433333327914dc640a0665}\label{classmain_1_1_app_a25088f398f433333327914dc640a0665} 
+{\bfseries ax} = self.\+fig.\+add\+\_\+subplot(111)
+\item 
+\Hypertarget{classmain_1_1_app_a4234a5154778fe2bcc154b81a74160d5}\label{classmain_1_1_app_a4234a5154778fe2bcc154b81a74160d5} 
+{\bfseries canvas} = Figure\+Canvas\+Tk\+Agg(self.\+fig, root)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classmain_1_1_app_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmain_1_1_app_a28609a20f62495f2f641e27b214752a4}\index{main.App@{main.App}!critico@{critico}}
+\index{critico@{critico}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{critico()}{critico()}}
+{\footnotesize\ttfamily \label{classmain_1_1_app_a28609a20f62495f2f641e27b214752a4} 
+main.\+App.\+critico (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Solicita el nodo crítico al backend C++.\end{DoxyVerb}
+ \Hypertarget{classmain_1_1_app_a89c91abe25e4d1dc05904cbb64011925}\index{main.App@{main.App}!load@{load}}
+\index{load@{load}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{classmain_1_1_app_a89c91abe25e4d1dc05904cbb64011925} 
+main.\+App.\+load (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Manejador para cargar dataset y medir tiempos.\end{DoxyVerb}
+ \Hypertarget{classmain_1_1_app_a83c9b96a1afa1530ab4781b7e9b85ab1}\index{main.App@{main.App}!run\_bfs@{run\_bfs}}
+\index{run\_bfs@{run\_bfs}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{run\_bfs()}{run\_bfs()}}
+{\footnotesize\ttfamily \label{classmain_1_1_app_a83c9b96a1afa1530ab4781b7e9b85ab1} 
+main.\+App.\+run\+\_\+bfs (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ejecuta simulación y dibuja el resultado.\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main.\+py\end{DoxyCompactItemize}

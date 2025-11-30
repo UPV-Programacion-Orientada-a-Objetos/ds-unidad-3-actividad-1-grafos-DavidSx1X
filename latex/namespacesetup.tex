@@ -1,0 +1,96 @@
+\doxysection{setup Namespace Reference}
+\hypertarget{namespacesetup}{}\label{namespacesetup}\index{setup@{setup}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesetup_ad06ec3d5b34fd61606b412462dc6786e}{sistema}} = platform.\+system()
+\begin{DoxyCompactList}\small\item\em Nombre del sistema operativo actual (ej. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespacesetup_a78d2be58475b44a5e21c7c26781df2ca}{mis\+\_\+args}} = \mbox{[}"{}-\/std=c++14"{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Banderas de compilación estándar para GCC/\+Clang. \end{DoxyCompactList}\item 
+\Hypertarget{namespacesetup_a76da66266dce1f9530b9394b53f4319f}\label{namespacesetup_a76da66266dce1f9530b9394b53f4319f} 
+list {\bfseries mis\+\_\+include} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Directorios de cabeceras (.h) adicionales. \end{DoxyCompactList}\item 
+\Hypertarget{namespacesetup_aa62952894ed6b50549d97094400cb1d2}\label{namespacesetup_aa62952894ed6b50549d97094400cb1d2} 
+list {\bfseries mis\+\_\+libs} = \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Directorios de librerías (.lib/.a) adicionales. \end{DoxyCompactList}\item 
+\Hypertarget{namespacesetup_a82331630102715010a9871d7d32b3281}\label{namespacesetup_a82331630102715010a9871d7d32b3281} 
+str {\bfseries ucrt\+\_\+include} = r"{}\+C\+:\textbackslash{}\+Program Files (x86)\textbackslash{}Windows Kits\textbackslash{}10\textbackslash{}\+Include\textbackslash{}10.\+0.\+19041.\+0\textbackslash{}ucrt"{}
+\item 
+\Hypertarget{namespacesetup_a3b2265c1427b54ba854bb58d18dfc8df}\label{namespacesetup_a3b2265c1427b54ba854bb58d18dfc8df} 
+str {\bfseries shared\+\_\+include} = r"{}\+C\+:\textbackslash{}\+Program Files (x86)\textbackslash{}Windows Kits\textbackslash{}10\textbackslash{}\+Include\textbackslash{}10.\+0.\+19041.\+0\textbackslash{}shared"{}
+\item 
+\Hypertarget{namespacesetup_a0c627c1b1a16bd18a2f7c6ffe2f4678c}\label{namespacesetup_a0c627c1b1a16bd18a2f7c6ffe2f4678c} 
+str {\bfseries um\+\_\+include} = r"{}\+C\+:\textbackslash{}\+Program Files (x86)\textbackslash{}Windows Kits\textbackslash{}10\textbackslash{}\+Include\textbackslash{}10.\+0.\+19041.\+0\textbackslash{}um"{}
+\item 
+\Hypertarget{namespacesetup_a73ad542326e26aa0ba8c90ae007d04a6}\label{namespacesetup_a73ad542326e26aa0ba8c90ae007d04a6} 
+str {\bfseries ucrt\+\_\+lib} = r"{}\+C\+:\textbackslash{}\+Program Files (x86)\textbackslash{}Windows Kits\textbackslash{}10\textbackslash{}\+Lib\textbackslash{}10.\+0.\+19041.\+0\textbackslash{}ucrt\textbackslash{}x64"{}
+\item 
+\Hypertarget{namespacesetup_ac84fb5ca7e53a4cd112c8430e2349c0c}\label{namespacesetup_ac84fb5ca7e53a4cd112c8430e2349c0c} 
+str {\bfseries um\+\_\+lib} = r"{}\+C\+:\textbackslash{}\+Program Files (x86)\textbackslash{}Windows Kits\textbackslash{}10\textbackslash{}\+Lib\textbackslash{}10.\+0.\+19041.\+0\textbackslash{}um\textbackslash{}x64"{}
+\item 
+list \mbox{\hyperlink{namespacesetup_a1bf56ea61d1e9865f316116dca2fbfea}{ext\+\_\+modules}}
+\item 
+\Hypertarget{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f}\label{namespacesetup_ab3a7a0638d76a01367c5bc3cc699447f} 
+{\bfseries name}
+\item 
+\Hypertarget{namespacesetup_aedf461ec52a946bda975938ba0b93ec0}\label{namespacesetup_aedf461ec52a946bda975938ba0b93ec0} 
+{\bfseries description}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@file setup.py
+@brief Script de construcción multiplataforma para la extensión NeuroNet.
+@details Este script automatiza la compilación del código C++ y su enlace con Python.
+         Detecta automáticamente el Sistema Operativo (Windows/Linux) para:
+         1. Configurar las rutas del SDK de Windows 10 (si es necesario).
+         2. Seleccionar las banderas de compilación adecuadas (MSVC vs GCC).
+@author David Salvador Contreras Grimaldo
+@date Noviembre 2025
+\end{DoxyVerb}
+ 
+
+\label{doc-var-members}
+\Hypertarget{namespacesetup_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesetup_a1bf56ea61d1e9865f316116dca2fbfea}\index{setup@{setup}!ext\_modules@{ext\_modules}}
+\index{ext\_modules@{ext\_modules}!setup@{setup}}
+\doxysubsubsection{\texorpdfstring{ext\_modules}{ext\_modules}}
+{\footnotesize\ttfamily \label{namespacesetup_a1bf56ea61d1e9865f316116dca2fbfea} 
+setup.\+ext\+\_\+modules}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ Extension(}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}neuronet"{}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Nombre\ del\ módulo\ a\ importar\ en\ Python}}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ sources=[\textcolor{stringliteral}{"{}neuronet.pyx"{}},\ \textcolor{stringliteral}{"{}GraphCore.cpp"{}}],\ \textcolor{comment}{\#\ Archivos\ fuente}}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ language=\textcolor{stringliteral}{"{}c++"{}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Lenguaje\ del\ motor}}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ include\_dirs=mis\_include,\ \ \ \ \ \ \ \textcolor{comment}{\#\ Rutas\ de\ cabeceras\ dinámicas}}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ library\_dirs=mis\_libs,\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Rutas\ de\ librerías\ dinámicas}}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ extra\_compile\_args=mis\_args,\ \ \ \ \textcolor{comment}{\#\ Banderas\ dinámicas}}
+\DoxyCodeLine{00009\ \ \ \ \ )}
+\DoxyCodeLine{00010\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespacesetup_a78d2be58475b44a5e21c7c26781df2ca}\index{setup@{setup}!mis\_args@{mis\_args}}
+\index{mis\_args@{mis\_args}!setup@{setup}}
+\doxysubsubsection{\texorpdfstring{mis\_args}{mis\_args}}
+{\footnotesize\ttfamily \label{namespacesetup_a78d2be58475b44a5e21c7c26781df2ca} 
+list setup.\+mis\+\_\+args = \mbox{[}"{}-\/std=c++14"{}\mbox{]}}
+
+
+
+Banderas de compilación estándar para GCC/\+Clang. 
+
+-\/std=c++14\+: Habilita características modernas de C++. \Hypertarget{namespacesetup_ad06ec3d5b34fd61606b412462dc6786e}\index{setup@{setup}!sistema@{sistema}}
+\index{sistema@{sistema}!setup@{setup}}
+\doxysubsubsection{\texorpdfstring{sistema}{sistema}}
+{\footnotesize\ttfamily \label{namespacesetup_ad06ec3d5b34fd61606b412462dc6786e} 
+setup.\+sistema = platform.\+system()}
+
+
+
+Nombre del sistema operativo actual (ej. 
+
+\textquotesingle{}Windows\textquotesingle{}, \textquotesingle{}Linux\textquotesingle{}, \textquotesingle{}Darwin\textquotesingle{}). 
